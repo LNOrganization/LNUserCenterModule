@@ -36,16 +36,9 @@ TODO: Add long description of the pod here.
     network.public_header_files = 'LNUserCenterModule/Classes/Network/*.h'
   end
   
-  s.subspec 'Base' do |base|
-    base.source_files = 'LNUserCenterModule/Classes/Base/**/*'
-    base.public_header_files = 'LNUserCenterModule/Classes/Base/*.h'
-    # 自有subspec
-    base.dependency 'LNUserCenterModule/Network'
-    # 公有库
-    base.dependency 'MJRefresh'
-    base.dependency 'SDWebImage'
-    base.dependency 'AFNetworking'
-    
+  s.subspec 'Common' do |com|
+    com.source_files = 'LNUserCenterModule/Classes/Common/**/*'
+    com.public_header_files = 'LNUserCenterModule/Classes/Common/*.h'
   end
   
   s.subspec 'Feature' do |feature|
@@ -54,7 +47,8 @@ TODO: Add long description of the pod here.
     feature.resource_bundles = {
       'LNUserCenterModule' => ['LNUserCenterModule/Classes/Feature/**/*.xib', 'LNUserCenterModule/Classes/**/*.{png,jpg,jpeg}']
     }
-    feature.dependency 'LNUserCenterModule/Base'
+    feature.dependency 'LNUserCenterModule/Network'
+    feature.dependency 'LNUserCenterModule/Common'
   end
   
   s.subspec 'Mediator' do |mediator|
@@ -62,8 +56,8 @@ TODO: Add long description of the pod here.
     mediator.dependency 'LNUserCenterModule/Feature'
   end
   
-  s.dependency 'LNModuleProtocol'
-  s.dependency 'LNCommonKit'
+  s.dependency 'LNModuleProtocol', '0.1.5'
+  s.dependency 'LNCommonKit', '0.1.8'
   
   # s.resource_bundles = {
   #   'LNUserCenterModule' => ['LNUserCenterModule/Assets/*.png']

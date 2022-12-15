@@ -21,10 +21,10 @@
   "source_files": "LNUserCenterModule/Classes/**/*",
   "dependencies": {
     "LNModuleProtocol": [
-
+      "0.1.5"
     ],
     "LNCommonKit": [
-
+      "0.1.8"
     ]
   },
   "subspecs": [
@@ -34,23 +34,9 @@
       "public_header_files": "LNUserCenterModule/Classes/Network/*.h"
     },
     {
-      "name": "Base",
-      "source_files": "LNUserCenterModule/Classes/Base/**/*",
-      "public_header_files": "LNUserCenterModule/Classes/Base/*.h",
-      "dependencies": {
-        "LNUserCenterModule/Network": [
-
-        ],
-        "MJRefresh": [
-
-        ],
-        "SDWebImage": [
-
-        ],
-        "AFNetworking": [
-
-        ]
-      }
+      "name": "Common",
+      "source_files": "LNUserCenterModule/Classes/Common/**/*",
+      "public_header_files": "LNUserCenterModule/Classes/Common/*.h"
     },
     {
       "name": "Feature",
@@ -63,7 +49,10 @@
         ]
       },
       "dependencies": {
-        "LNUserCenterModule/Base": [
+        "LNUserCenterModule/Network": [
+
+        ],
+        "LNUserCenterModule/Common": [
 
         ]
       }
