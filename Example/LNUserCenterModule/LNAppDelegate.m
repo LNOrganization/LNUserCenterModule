@@ -7,11 +7,19 @@
 //
 
 #import "LNAppDelegate.h"
+#import <LNModuleCore/LNModuleCore.h>
+#import <LNModuleProtocol/LNModuleProtocol.h>
 
 @implementation LNAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    id<LNUserCenterModuleProtocol> videoModule = [[LNModuleManager sharedInstance] impInstanceForProtocol:@protocol(LNUserCenterModuleProtocol)] ;
+    UIViewController *vc = [videoModule getMineViewController];
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:vc];
+    self.window.rootViewController = navi;
+    
     // Override point for customization after application launch.
     return YES;
 }

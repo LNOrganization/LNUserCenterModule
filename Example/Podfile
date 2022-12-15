@@ -5,6 +5,17 @@ platform :ios, '10.0'
 target 'LNUserCenterModule_Example' do
   pod 'LNUserCenterModule', :path => '../'
 
+  pod 'SDWebImage', '5.9.5'
+  pod 'Masonry'
+  pod 'CocoaAsyncSocket'
+  pod 'Aspects'
+  pod 'YYKit'
+  
+  pod 'LNModuleCore', :path => '../../LNModuleCore'
+  pod 'LNModuleProtocol', :path => '../../LNModuleProtocol'
+  pod 'LNCommonKit', :path => '../../LNCommonKit'
+  
+  
   target 'LNUserCenterModule_Tests' do
     inherit! :search_paths
 

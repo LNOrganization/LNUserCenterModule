@@ -21,16 +21,49 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/dongjianxiong/LNUserCenterModule'
+  s.homepage         = 'https://github.com/NoNameOrganazation/LNUserCenterModule'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'dongjianxiong' => 'jianxiong20090919@126.com' }
-  s.source           = { :git => 'https://github.com/dongjianxiong/LNUserCenterModule.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/NoNameOrganazation/LNUserCenterModule.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'LNUserCenterModule/Classes/**/*'
+  s.subspec 'Network' do |network|
+    network.source_files = 'LNUserCenterModule/Classes/Network/**/*'
+    network.public_header_files = 'LNUserCenterModule/Classes/Network/*.h'
+  end
+  
+  s.subspec 'Base' do |base|
+    base.source_files = 'LNUserCenterModule/Classes/Base/**/*'
+    base.public_header_files = 'LNUserCenterModule/Classes/Base/*.h'
+    # 自有subspec
+    base.dependency 'LNUserCenterModule/Network'
+    # 公有库
+    base.dependency 'MJRefresh'
+    base.dependency 'SDWebImage'
+    base.dependency 'AFNetworking'
+    
+  end
+  
+  s.subspec 'Feature' do |feature|
+    feature.source_files = 'LNUserCenterModule/Classes/Feature/**/*.{h,m}'
+    feature.public_header_files = 'LNUserCenterModule/Classes/Feature/**/*.h'
+    feature.resource_bundles = {
+      'LNUserCenterModule' => ['LNUserCenterModule/Classes/Feature/**/*.xib', 'LNUserCenterModule/Classes/**/*.{png,jpg,jpeg}']
+    }
+    feature.dependency 'LNUserCenterModule/Base'
+  end
+  
+  s.subspec 'Mediator' do |mediator|
+    mediator.source_files = 'LNUserCenterModule/Classes/Mediator/**/*'
+    mediator.dependency 'LNUserCenterModule/Feature'
+  end
+  
+  s.dependency 'LNModuleProtocol'
+  s.dependency 'LNCommonKit'
   
   # s.resource_bundles = {
   #   'LNUserCenterModule' => ['LNUserCenterModule/Assets/*.png']

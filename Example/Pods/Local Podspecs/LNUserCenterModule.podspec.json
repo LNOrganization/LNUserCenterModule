@@ -1,0 +1,81 @@
+{
+  "name": "LNUserCenterModule",
+  "version": "0.1.0",
+  "summary": "A short description of LNUserCenterModule.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/NoNameOrganazation/LNUserCenterModule",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "dongjianxiong": "jianxiong20090919@126.com"
+  },
+  "source": {
+    "git": "https://github.com/NoNameOrganazation/LNUserCenterModule.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "LNUserCenterModule/Classes/**/*",
+  "dependencies": {
+    "LNModuleProtocol": [
+
+    ],
+    "LNCommonKit": [
+
+    ]
+  },
+  "subspecs": [
+    {
+      "name": "Network",
+      "source_files": "LNUserCenterModule/Classes/Network/**/*",
+      "public_header_files": "LNUserCenterModule/Classes/Network/*.h"
+    },
+    {
+      "name": "Base",
+      "source_files": "LNUserCenterModule/Classes/Base/**/*",
+      "public_header_files": "LNUserCenterModule/Classes/Base/*.h",
+      "dependencies": {
+        "LNUserCenterModule/Network": [
+
+        ],
+        "MJRefresh": [
+
+        ],
+        "SDWebImage": [
+
+        ],
+        "AFNetworking": [
+
+        ]
+      }
+    },
+    {
+      "name": "Feature",
+      "source_files": "LNUserCenterModule/Classes/Feature/**/*.{h,m}",
+      "public_header_files": "LNUserCenterModule/Classes/Feature/**/*.h",
+      "resource_bundles": {
+        "LNUserCenterModule": [
+          "LNUserCenterModule/Classes/Feature/**/*.xib",
+          "LNUserCenterModule/Classes/**/*.{png,jpg,jpeg}"
+        ]
+      },
+      "dependencies": {
+        "LNUserCenterModule/Base": [
+
+        ]
+      }
+    },
+    {
+      "name": "Mediator",
+      "source_files": "LNUserCenterModule/Classes/Mediator/**/*",
+      "dependencies": {
+        "LNUserCenterModule/Feature": [
+
+        ]
+      }
+    }
+  ]
+}
