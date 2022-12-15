@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "LNUserCenterMediatorDelegate.h"
 #import "LNUserCenterModuleConfig.h"
 #import "LNBaseUserTableViewController.h"
 #import "LNUserTableViewCell.h"
@@ -24,10 +25,10 @@
 #import "LNUserCenterViewController.h"
 #import "LNUserInfoProvider.h"
 #import "LNUserInfoView.h"
-#import "LNUserCenterMediatorDelegate.h"
 #import "LNUserCenterModule.h"
 #import "LNUserCenterMediator.h"
 #import "LNUserCenterNetworkConfig.h"
+#import "LNUserCenterMediatorDelegate.h"
 #import "LNUserCenterModuleConfig.h"
 #import "LNBaseUserTableViewController.h"
 #import "LNUserTableViewCell.h"

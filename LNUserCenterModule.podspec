@@ -44,9 +44,9 @@ TODO: Add long description of the pod here.
   s.subspec 'Feature' do |feature|
     feature.source_files = 'LNUserCenterModule/Classes/Feature/**/*.{h,m}'
     feature.public_header_files = 'LNUserCenterModule/Classes/Feature/**/*.h'
-    feature.resource_bundles = {
-      'LNUserCenterModule' => ['LNUserCenterModule/Classes/Feature/**/*.xib', 'LNUserCenterModule/Classes/**/*.{png,jpg,jpeg}']
-    }
+#    feature.resource_bundles = {
+#      'LNUserCenterModule' => ['LNUserCenterModule/Classes/Feature/**/*.xib', 'LNUserCenterModule/Classes/Resource/**/*.{png,jpg,jpeg}']
+#    }
     feature.dependency 'LNUserCenterModule/Network'
     feature.dependency 'LNUserCenterModule/Common'
   end
@@ -59,9 +59,6 @@ TODO: Add long description of the pod here.
   s.dependency 'LNModuleProtocol', '0.1.5'
   s.dependency 'LNCommonKit', '0.1.8'
   
-  # s.resource_bundles = {
-  #   'LNUserCenterModule' => ['LNUserCenterModule/Assets/*.png']
-  # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

@@ -93,26 +93,26 @@ PODS:
   - LNModuleCore (0.1.9)
   - LNModuleProtocol (0.1.5):
     - LNModuleCore
-  - LNUserCenterModule (0.1.0):
+  - LNUserCenterModule (0.1.1):
     - LNCommonKit (= 0.1.8)
     - LNModuleProtocol (= 0.1.5)
-    - LNUserCenterModule/Common (= 0.1.0)
-    - LNUserCenterModule/Feature (= 0.1.0)
-    - LNUserCenterModule/Mediator (= 0.1.0)
-    - LNUserCenterModule/Network (= 0.1.0)
-  - LNUserCenterModule/Common (0.1.0):
+    - LNUserCenterModule/Common (= 0.1.1)
+    - LNUserCenterModule/Feature (= 0.1.1)
+    - LNUserCenterModule/Mediator (= 0.1.1)
+    - LNUserCenterModule/Network (= 0.1.1)
+  - LNUserCenterModule/Common (0.1.1):
     - LNCommonKit (= 0.1.8)
     - LNModuleProtocol (= 0.1.5)
-  - LNUserCenterModule/Feature (0.1.0):
+  - LNUserCenterModule/Feature (0.1.1):
     - LNCommonKit (= 0.1.8)
     - LNModuleProtocol (= 0.1.5)
     - LNUserCenterModule/Common
     - LNUserCenterModule/Network
-  - LNUserCenterModule/Mediator (0.1.0):
+  - LNUserCenterModule/Mediator (0.1.1):
     - LNCommonKit (= 0.1.8)
     - LNModuleProtocol (= 0.1.5)
     - LNUserCenterModule/Feature
-  - LNUserCenterModule/Network (0.1.0):
+  - LNUserCenterModule/Network (0.1.1):
     - LNCommonKit (= 0.1.8)
     - LNModuleProtocol (= 0.1.5)
   - Masonry (1.1.0)
@@ -151,7 +151,7 @@ SPEC CHECKSUMS:
   LNCommonKit: 348c5dc55afedde4a509e1831d433bc2d3f0dccd
   LNModuleCore: d37faf840963a9ccc7e6830331e1f340d86ac866
   LNModuleProtocol: 40ae683fedbbeccf8294c064d294f98dae54a99b
-  LNUserCenterModule: 9091f427f85f1ae7e947deccd104ecf05e769c6b
+  LNUserCenterModule: ff3d4c3f873aa479c6c8bb30f06388e7b81b9756
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: 30997d30b347c8e9508a4db11e3a690da0c9b85a
   SDWebImage: 0b2ba0d56479bf6a45ecddbfd5558bea93150d25
