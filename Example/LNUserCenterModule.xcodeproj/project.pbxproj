@@ -23,6 +23,9 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		B84ECE24294B108500FB57CA /* pod_release.sh in Resources */ = {isa = PBXBuildFile; fileRef = B84ECE21294B108400FB57CA /* pod_release.sh */; };
+		B84ECE25294B108500FB57CA /* pod_local_check.sh in Resources */ = {isa = PBXBuildFile; fileRef = B84ECE22294B108400FB57CA /* pod_local_check.sh */; };
+		B84ECE26294B108500FB57CA /* pod_remote_check.sh in Resources */ = {isa = PBXBuildFile; fileRef = B84ECE23294B108400FB57CA /* pod_remote_check.sh */; };
 		D9D2B5FCB5C76C581003B170 /* Pods_LNUserCenterModule_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8872339BE2AB626DB975885B /* Pods_LNUserCenterModule_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +42,7 @@
 /* Begin PBXFileReference section */
 		13EA12F17BD99516A4C8A2A6 /* Pods_LNUserCenterModule_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LNUserCenterModule_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3079CBF4BB3D8C0EC97BE022 /* Pods-LNUserCenterModule_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LNUserCenterModule_Tests.release.xcconfig"; path = "Target Support Files/Pods-LNUserCenterModule_Tests/Pods-LNUserCenterModule_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		58A727847C4735FB48BEC606 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		58A727847C4735FB48BEC606 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* LNUserCenterModule_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LNUserCenterModule_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -64,9 +67,12 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8872339BE2AB626DB975885B /* Pods_LNUserCenterModule_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LNUserCenterModule_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ACBFB0E28BAC958D3636B05 /* Pods-LNUserCenterModule_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LNUserCenterModule_Example.release.xcconfig"; path = "Target Support Files/Pods-LNUserCenterModule_Example/Pods-LNUserCenterModule_Example.release.xcconfig"; sourceTree = "<group>"; };
+		B84ECE21294B108400FB57CA /* pod_release.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = pod_release.sh; sourceTree = "<group>"; };
+		B84ECE22294B108400FB57CA /* pod_local_check.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = pod_local_check.sh; sourceTree = "<group>"; };
+		B84ECE23294B108400FB57CA /* pod_remote_check.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = pod_remote_check.sh; sourceTree = "<group>"; };
 		D9F1301CC2EC5640D49AAE4B /* Pods-LNUserCenterModule_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LNUserCenterModule_Tests.debug.xcconfig"; path = "Target Support Files/Pods-LNUserCenterModule_Tests/Pods-LNUserCenterModule_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		E4731049DD4AE72CDF5E78BF /* LNUserCenterModule.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = LNUserCenterModule.podspec; path = ../LNUserCenterModule.podspec; sourceTree = "<group>"; };
-		E529CC721AC70079312DAAD4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		E4731049DD4AE72CDF5E78BF /* LNUserCenterModule.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LNUserCenterModule.podspec; path = ../LNUserCenterModule.podspec; sourceTree = "<group>"; };
+		E529CC721AC70079312DAAD4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,7 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
+				B84ECE20294B108400FB57CA /* pod_script */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for LNUserCenterModule */,
 				6003F5B5195388D20070C39A /* Tests */,
@@ -185,6 +192,17 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		B84ECE20294B108400FB57CA /* pod_script */ = {
+			isa = PBXGroup;
+			children = (
+				B84ECE21294B108400FB57CA /* pod_release.sh */,
+				B84ECE22294B108400FB57CA /* pod_local_check.sh */,
+				B84ECE23294B108400FB57CA /* pod_remote_check.sh */,
+			);
+			name = pod_script;
+			path = ../pod_script;
+			sourceTree = "<group>";
+		};
 		DC93A755B4042CC51F7274BE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,7 +211,6 @@
 				D9F1301CC2EC5640D49AAE4B /* Pods-LNUserCenterModule_Tests.debug.xcconfig */,
 				3079CBF4BB3D8C0EC97BE022 /* Pods-LNUserCenterModule_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -258,6 +275,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -277,6 +295,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B84ECE24294B108500FB57CA /* pod_release.sh in Resources */,
+				B84ECE25294B108500FB57CA /* pod_local_check.sh in Resources */,
+				B84ECE26294B108500FB57CA /* pod_remote_check.sh in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
