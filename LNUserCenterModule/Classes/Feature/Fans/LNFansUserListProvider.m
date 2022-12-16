@@ -13,7 +13,7 @@
 - (LNHTTPRequest *)requestWithSuccess:(LNRequestSuccessBlock)success
                               failure:(LNRequestFailureBlock)failure
 {
-    return [LNRequestManager startRequestCreator:^(LNHTTPRequest * _Nonnull request) {
+    return [LNNetworkManager startRequestCreator:^(LNHTTPRequest * _Nonnull request) {
         request.urlPath = @"";
         [request createParameters:^(NSMutableDictionary * _Nonnull params) {
             [params setObject:@(self.pageSize) forKey:@"pageSize"];
