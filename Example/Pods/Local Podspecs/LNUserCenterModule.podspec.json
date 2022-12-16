@@ -1,8 +1,8 @@
 {
   "name": "LNUserCenterModule",
-  "version": "0.1.1",
-  "summary": "A short description of LNUserCenterModule.",
-  "description": "TODO: Add long description of the pod here.",
+  "version": "0.1.3",
+  "summary": "个人中心组件",
+  "description": "个人中心组件，负责个人中心相关业务开发维护组件。",
   "homepage": "https://github.com/NoNameOrganazation/LNUserCenterModule",
   "license": {
     "type": "MIT",
@@ -13,18 +13,22 @@
   },
   "source": {
     "git": "https://github.com/NoNameOrganazation/LNUserCenterModule.git",
-    "tag": "0.1.1"
+    "tag": "0.1.3"
   },
   "platforms": {
     "ios": "10.0"
   },
-  "source_files": "LNUserCenterModule/Classes/**/*",
+  "source_files": "LNUserCenterModule/Classes/*",
+  "public_header_files": "LNUserCenterModule/Classes/*.h",
   "dependencies": {
     "LNModuleProtocol": [
-      "0.1.5"
+
     ],
     "LNCommonKit": [
-      "0.1.8"
+
+    ],
+    "SDWebImage": [
+      "~>5.9.0"
     ]
   },
   "subspecs": [
