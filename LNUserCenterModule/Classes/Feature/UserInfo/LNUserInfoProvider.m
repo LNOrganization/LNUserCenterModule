@@ -9,8 +9,8 @@
 
 @implementation LNUserInfoProvider
 
-- (LNHTTPRequest *)requestWithSuccess:(LNRequestSuccessBlock)success
-                              failure:(LNRequestFailureBlock)failure
+- (LNHTTPRequest *)requestWithSuccess:(LNLoadSuccessBlock)success
+                              failure:(LNLoadFailureBlock)failure
 {
     return [LNNetworkManager startRequestCreator:^(LNHTTPRequest * _Nonnull request) {
         request.urlPath = @"userCenter/getUserInfo";
@@ -22,9 +22,9 @@
             }
         }];
     } succeed:^(id  _Nonnull data) {
-        LNSafeBlockCall(success, data);
+        LN_SAFE_BLOCK_CALL(success, data);
     } failed:^(NSError * _Nonnull error) {
-        LNSafeBlockCall(failure, error);
+        LN_SAFE_BLOCK_CALL(failure, error);
     }];
 }
 

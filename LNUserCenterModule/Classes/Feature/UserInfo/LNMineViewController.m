@@ -42,10 +42,9 @@
 - (void)updateUserInfo
 {
     __weak typeof(self) weakSelf = self;
-    self.provider = [LNUserInfoProvider loadWithCreator:^(LNUserInfoProvider * _Nonnull provider) {
-    } success:^(id  _Nullable data) {
-        [weakSelf.userInfoView reloadWithData:data];
-    } failure:^(NSString * _Nullable errMsg) {
+    self.provider = [LNUserInfoProvider loadWithCreator:^(LNUserInfoProvider  * _Nonnull provider) {
+        
+    } completion:^(BOOL isSucceed, id  _Nullable data, NSString * _Nonnull errMsg) {
         LNUserModel *user = [[LNUserModel alloc] init];
         user.name = @"名字";
         user.iconUrl = @"https://t7.baidu.com/it/u=2582370511,530426427&fm=193&f=GIF";

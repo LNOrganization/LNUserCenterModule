@@ -13,10 +13,7 @@
 
 __attribute__((constructor)) void addModuleUserCenterModule(void){
     
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        [[LNModuleManager sharedInstance] addImpClassName:@"LNUserCenterModule" protocolName:@"LNUserCenterModuleProtocol"];
-    });
+    [[LNModuleManager sharedInstance] addImpClassName:@"LNUserCenterModule" protocolName:@"LNUserCenterModuleProtocol"];
 }
 
 

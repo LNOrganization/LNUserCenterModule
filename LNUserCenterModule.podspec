@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
   个人中心组件，负责个人中心相关业务开发维护组件。
                        DESC
 
-  s.homepage         = 'https://github.com/NoNameOrganazation/LNUserCenterModule'
+  s.homepage         = 'https://github.com/LNOrganization/LNUserCenterModule'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'dongjianxiong' => 'jianxiong20090919@126.com' }
-  s.source           = { :git => 'https://github.com/NoNameOrganazation/LNUserCenterModule.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/LNOrganization/LNUserCenterModule.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
@@ -37,7 +37,10 @@ Pod::Spec.new do |s|
     network.source_files = 'LNUserCenterModule/Classes/Network/**/*'
     network.public_header_files = 'LNUserCenterModule/Classes/Network/*.h'
   end
-  
+  s.subspec 'Data' do |com|
+    com.source_files = 'LNUserCenterModule/Classes/Data/**/*'
+    com.public_header_files = 'LNUserCenterModule/Classes/Data/*.h'
+  end
   s.subspec 'Common' do |com|
     com.source_files = 'LNUserCenterModule/Classes/Common/**/*'
     com.public_header_files = 'LNUserCenterModule/Classes/Common/*.h'
@@ -51,6 +54,7 @@ Pod::Spec.new do |s|
 #    }
     feature.dependency 'LNUserCenterModule/Network'
     feature.dependency 'LNUserCenterModule/Common'
+    feature.dependency 'LNUserCenterModule/Data'
   end
   
   s.subspec 'Mediator' do |mediator|

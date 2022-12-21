@@ -10,8 +10,8 @@
 
 @implementation LNFriendUserListProvider
 
-- (LNHTTPRequest *)requestWithSuccess:(LNRequestSuccessBlock)success
-                              failure:(LNRequestFailureBlock)failure
+- (LNHTTPRequest *)requestWithSuccess:(LNLoadSuccessBlock)success
+                              failure:(LNLoadFailureBlock)failure
 {
     return [LNNetworkManager startRequestCreator:^(LNHTTPRequest * _Nonnull request) {
         request.urlPath = @"";
@@ -20,23 +20,35 @@
             [params setObject:@(self.currentPage) forKey:@"pageNum"];
         }];
     } succeed:^(id  _Nonnull data) {
-        LNSafeBlockCall(success, data);
+        LN_SAFE_BLOCK_CALL(success, data);
     } failed:^(NSError * _Nonnull error) {
-        LNSafeBlockCall(failure, error);
-        LNSafeBlockCall(success, [self localDatas]);
+        LN_SAFE_BLOCK_CALL(failure, error);
+#if DEBUG
+        LN_SAFE_BLOCK_CALL(success, [self localDatas]);
+#endif
     }];
 }
 
-- (NSArray *)localDatas
+- (NSDictionary *)localDatas
 {
     NSMutableArray *datas = [NSMutableArray array];
     for (NSInteger index = 0; index < 20; index ++) {
-        LNUserModel *user = [[LNUserModel alloc] init];
-        user.name = [NSString stringWithFormat:@"我的好友%@", @(index)];
-        user.iconUrl = @"https://t7.baidu.com/it/u=2582370511,530426427&fm=193&f=GIF";
-        [datas addObject:user];
+        NSMutableDictionary *user = [[NSMutableDictionary alloc] init];
+        user[@"name"] = [NSString stringWithFormat:@"我的关注%@", @(index)];
+        user[@"iconUrl"] = @"https://t7.baidu.com/it/u=2582370511,530426427&fm=193&f=GIF";
+        [datas addObject:[user copy]];
     }
-    return [datas copy];
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    dict[@"code"] = @(200);
+    dict[@"message"] = @"请求成功";
+    dict[@"data"] = [datas copy];
+    return [dict copy];
 }
+
+- (Class)modelClass
+{
+    return [LNUserModel class];
+}
+
 
 @end

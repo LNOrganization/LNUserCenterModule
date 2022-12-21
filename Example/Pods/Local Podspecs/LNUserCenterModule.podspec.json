@@ -3,7 +3,7 @@
   "version": "0.1.3",
   "summary": "个人中心组件",
   "description": "个人中心组件，负责个人中心相关业务开发维护组件。",
-  "homepage": "https://github.com/NoNameOrganazation/LNUserCenterModule",
+  "homepage": "https://github.com/LNOrganization/LNUserCenterModule",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,7 +12,7 @@
     "dongjianxiong": "jianxiong20090919@126.com"
   },
   "source": {
-    "git": "https://github.com/NoNameOrganazation/LNUserCenterModule.git",
+    "git": "https://github.com/LNOrganization/LNUserCenterModule.git",
     "tag": "0.1.3"
   },
   "platforms": {
@@ -38,6 +38,11 @@
       "public_header_files": "LNUserCenterModule/Classes/Network/*.h"
     },
     {
+      "name": "Data",
+      "source_files": "LNUserCenterModule/Classes/Data/**/*",
+      "public_header_files": "LNUserCenterModule/Classes/Data/*.h"
+    },
+    {
       "name": "Common",
       "source_files": "LNUserCenterModule/Classes/Common/**/*",
       "public_header_files": "LNUserCenterModule/Classes/Common/*.h"
@@ -51,6 +56,9 @@
 
         ],
         "LNUserCenterModule/Common": [
+
+        ],
+        "LNUserCenterModule/Data": [
 
         ]
       }
