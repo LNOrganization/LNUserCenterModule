@@ -1,6 +1,6 @@
 {
   "name": "LNUserCenterModule",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "summary": "个人中心组件",
   "description": "个人中心组件，负责个人中心相关业务开发维护组件。",
   "homepage": "https://github.com/LNOrganization/LNUserCenterModule",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/LNOrganization/LNUserCenterModule.git",
-    "tag": "0.1.3"
+    "tag": "0.1.4"
   },
   "platforms": {
     "ios": "10.0"
