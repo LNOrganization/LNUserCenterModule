@@ -47,8 +47,34 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'Feature' do |feature|
-    feature.source_files = 'LNUserCenterModule/Classes/Feature/**/*.{h,m}'
-    feature.public_header_files = 'LNUserCenterModule/Classes/Feature/**/*.h'
+    feature.source_files = 'LNUserCenterModule/Classes/Feature/*.{h,m}'
+    feature.public_header_files = 'LNUserCenterModule/Classes/Feature/*.h'
+    
+    feature.subspec 'Base' do |s1|
+      s1.source_files = 'LNUserCenterModule/Classes/Feature/Base/**/*'
+      s1.public_header_files = 'LNUserCenterModule/Classes/Feature/Base/*.h'
+    end
+    feature.subspec 'Fans' do |s1|
+      s1.source_files = 'LNUserCenterModule/Classes/Feature/Fans/**/*'
+      s1.public_header_files = 'LNUserCenterModule/Classes/Feature/Fans/*.h'
+      s1.dependency 'LNUserCenterModule/Feature/Base'
+    end
+    feature.subspec 'Focus' do |s1|
+      s1.source_files = 'LNUserCenterModule/Classes/Feature/Focus/**/*'
+      s1.public_header_files = 'LNUserCenterModule/Classes/Feature/Focus/*.h'
+      s1.dependency 'LNUserCenterModule/Feature/Base'
+    end
+    feature.subspec 'Friend' do |s1|
+      s1.source_files = 'LNUserCenterModule/Classes/Feature/Friend/**/*'
+      s1.public_header_files = 'LNUserCenterModule/Classes/Feature/Friend/*.h'
+      s1.dependency 'LNUserCenterModule/Feature/Base'
+    end
+    feature.subspec 'UserInfo' do |s1|
+      s1.source_files = 'LNUserCenterModule/Classes/Feature/UserInfo/**/*'
+      s1.public_header_files = 'LNUserCenterModule/Classes/Feature/UserInfo/*.h'
+      s1.dependency 'LNUserCenterModule/Feature/Base'
+    end
+    
 #    feature.resource_bundles = {
 #      'LNUserCenterModule' => ['LNUserCenterModule/Classes/Feature/**/*.xib', 'LNUserCenterModule/Classes/Resource/**/*.{png,jpg,jpeg}']
 #    }
